@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_inventory_user,inventory.product,model_inventory_product,base.group_user,1,1,1,1
+access_inventory_user_stock_in,inventory.stock_in,model_inventory_stock_in,base.group_user,1,1,1,1
+access_inventory_user_stock_out,inventory.stock_out,model_inventory_stock_out,base.group_user,1,1,1,1

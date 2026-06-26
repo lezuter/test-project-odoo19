@@ -1,0 +1,10 @@
+<odoo>
+
+<record id="seq_transaksi_out" model="ir.sequence">
+    <field name="name">No. Transaksi Stock Keluar</field>
+    <field name="code">inventory.stock.out</field>
+    <field name="prefix">OUT</field>
+    <field name="padding">4</field>
+</record>
+
+</odoo>

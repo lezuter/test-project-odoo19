@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+<record id="view_stock_out_form" model="ir.ui.view">
+    <field name ="name">stock.out.form</field>
+    <field name ="model">inventory.stock.out</field>
+    <field name = "arch" type="xml">
+        <form string="Stock Keluar">
+            <sheet>
+                <group>
+                    <field name="no_trx"></field>
+                    <field name="tanggal"></field>
+                    <field name="produk"></field>
+                    <field name="sku"></field>
+                    <field name="qty"></field>
+                    <field name="penerima"></field>
+                    <field name="tipe"></field>
+                </group>
+            </sheet>
+        </form>
+    </field>
+</record>
+
+<record id="view_stock_out_tree" model="ir.ui.view">
+    <field name ="name">stock.out.tree</field>
+    <field name ="model">inventory.stock.out</field>
+    <field name = "arch" type="xml">
+        <list string="Stock Keluar">
+            <field name="no_trx"></field>
+            <field name="tanggal"></field>
+            <field name="produk"></field>
+            <field name="sku"></field>
+            <field name="qty"></field>
+            <field name="penerima"></field>
+            <field name="tipe"></field>
+        </list>
+    </field>
+</record>
+
+<record id="action_stock_out" model="ir.actions.act_window">
+    <field name ="name">Stock keluar</field>
+    <field name ="res_model">inventory.stock.out</field>
+    <field name ="view_mode">list,form</field>
+</record>
+
+<menuitem id="menu_inventory_root" name="Custom Inventory" sequence="10"/>
+<menuitem id="menu_inventory_stock_out" name="Stock Keluar" parent="menu_inventory_root" action="action_stock_out" sequence="10"/>
+
+</odoo>

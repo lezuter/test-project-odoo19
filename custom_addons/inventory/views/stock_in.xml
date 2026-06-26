@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+<record id="view_stock_in_form" model="ir.ui.view">
+    <field name ="name">stock.in.form</field>
+    <field name ="model">inventory.stock.in</field>
+    <field name = "arch" type="xml">
+        <form string="Stock Masuk">
+            <sheet>
+                <group>
+                    <field name="no_trx"></field>
+                    <field name="tanggal"></field>
+                    <field name="produk"></field>
+                    <field name="sku"></field>
+                    <field name="qty"></field>
+                    <field name="suplier"></field>
+                    <field name="keterangan"></field>
+                </group>
+            </sheet>
+        </form>
+    </field>
+</record>
+
+<record id="view_stock_in_tree" model="ir.ui.view">
+    <field name ="name">stock.in.tree</field>
+    <field name ="model">inventory.stock.in</field>
+    <field name = "arch" type="xml">
+        <list string="Stock Masuk">
+            <field name="no_trx"></field>
+            <field name="tanggal"></field>
+            <field name="produk"></field>
+            <field name="sku"></field>
+            <field name="qty"></field>
+            <field name="suplier"></field>
+            <field name="keterangan"></field>
+        </list>
+    </field>
+</record>
+
+<record id="action_stock_in" model="ir.actions.act_window">
+    <field name ="name">Stock Masuk</field>
+    <field name ="res_model">inventory.stock.in</field>
+    <field name ="view_mode">list,form</field>
+</record>
+
+<menuitem id="menu_inventory_root" name="Custom Inventory" sequence="10"/>
+<menuitem id="menu_inventory_stock_in" name="Stock Masuk" parent="menu_inventory_root" action="action_stock_in" sequence="10"/>
+
+</odoo>
