@@ -1,4 +1,0 @@
-.gitignore
-odoo_db/
-__pycache__/
-*.pyc
